@@ -3,6 +3,7 @@ Ptcr (short for Printcolor) is a tool that uses the Write-Host cmdlet in Powersh
 
 The usage is :
 ``Ptcr.bat [-H] [/H] <Text> <Color>`` 
+
 Argument meanings :
 ````
 -H Or /H Displays a help message.
