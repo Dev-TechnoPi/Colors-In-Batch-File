@@ -1,6 +1,6 @@
 @if defined show_commands (@echo on) else (@echo off) && setlocal enableextensions enabledelayedexpansion
 for %%A in (/h -h) do if /i "%~1" == "%%A" (
-    echo.
+        echo.
         echo Usage / Syntax : ptcr.bat [-H] [/H] ^<Text^> ^<Color^>
 	echo Text     : To specify the text to print.
 	echo Color    : To specify the color to print.
@@ -26,10 +26,10 @@ for %%A in (/h -h) do if /i "%~1" == "%%A" (
 	echo Put the two words together. Example : DarkGray.
 	echo.
 	echo Infomation :
-    echo Created by : Kyle Vu, ^(C^) 2019.
+        echo Created by : Kyle Vu, ^(C^) 2019.
 	echo Ptcr.bat is licensed by the MIT license.
 	endlocal && exit /b 0
-    )
+        )
 if not "%~1" == "" set "text=%~1"
 if not "%~2" == "" set "color=%~2"
 if not defined text (
@@ -39,7 +39,7 @@ if not defined text (
 if not defined color (
     echo Error : Missing Color Argument.
 	endlocal && exit /b 1
-    )
+        )
 powershell -command "Write-Host !text! -foregroundcolor !color!" 2>nul || (
     echo Error : Invalid Text Or Color Argument.
 	endlocal && exit /b 1
